@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   storageadapter:
-    image: horeichcontainers.azurecr.io/storageadapter:latest
+    image: horeichcontainers.azurecr.io/storageadapter-v2:latest
     build:
       context: ./StorageAdapter
       dockerfile: Dockerfile
@@ -15,7 +15,7 @@ services:
         ipv4_address: 172.18.1.1
 
   iotbridge:
-    image: horeichcontainers.azurecr.io/iotbridge:latest
+    image: horeichcontainers.azurecr.io/iotbridge-v2:latest
     build:
       context: ./IoTBridge
       dockerfile: Dockerfile
