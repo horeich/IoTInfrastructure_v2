@@ -27,7 +27,7 @@ services:
       docker-net:
         ipv4_address: 172.18.1.2
     depends_on:
-      - storageadapter
+      - storageadapter-v2
 
   coapserver:
     image: horeichcontainers.azurecr.io/coapserver:latest   
@@ -40,7 +40,7 @@ services:
       docker-net:
         ipv4_address: 172.18.1.3
     depends_on:
-      - iotbridge
+      - iotbridge-v2
 
 networks:
   docker-net:
