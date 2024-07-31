@@ -1,0 +1,51 @@
+version: '3.4'
+
+services:
+  storageadapter:
+    image: horeichcontainers.azurecr.io/storageadapter:latest
+    build:
+      context: ./StorageAdapter
+      dockerfile: Dockerfile
+    environment:
+      - PCS_KEYVAULT_NAME
+      - PCS_AAD_APPID
+      - PCS_AAD_APPSECRET
+    networks:
+      docker-net:
+        ipv4_address: 172.18.1.1
+
+  iotbridge:
+    image: horeichcontainers.azurecr.io/iotbridge:latest
+    build:
+      context: ./IoTBridge
+      dockerfile: Dockerfile
+    environment:
+      - PCS_KEYVAULT_NAME
+      - PCS_AAD_APPID
+      - PCS_AAD_APPSECRET
+    networks:
+      docker-net:
+        ipv4_address: 172.18.1.2
+    depends_on:
+      - storageadapter
+
+  coapserver:
+    image: horeichcontainers.azurecr.io/coapserver:latest   
+    build:
+      context: ./CoAPEndpoint
+      dockerfile: Dockerfile
+    ports:
+      - "5683:5683/udp"
+    networks:
+      docker-net:
+        ipv4_address: 172.18.1.3
+    depends_on:
+      - iotbridge
+
+networks:
+  docker-net:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.18.0.0/16
+          
