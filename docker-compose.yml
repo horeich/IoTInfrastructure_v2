@@ -10,6 +10,7 @@ services:
       - PCS_KEYVAULT_NAME
       - PCS_AAD_APPID
       - PCS_AAD_APPSECRET
+      - ASPNETCORE_ENVIRONMENT
     networks:
       docker-net:
         ipv4_address: 172.18.1.1
@@ -23,17 +24,20 @@ services:
       - PCS_KEYVAULT_NAME
       - PCS_AAD_APPID
       - PCS_AAD_APPSECRET
+      - ASPNETCORE_ENVIRONMENT
     networks:
       docker-net:
         ipv4_address: 172.18.1.2
     depends_on:
       - storageadapter-v2
 
-  coapserver:
-    image: horeichcontainers.azurecr.io/coapserver:latest   
+  coapendpoint:
+    image: horeichcontainers.azurecr.io/coapendpoint:latest   
     build:
       context: ./CoAPEndpoint
       dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT
     ports:
       - "5683:5683/udp"
     networks:
