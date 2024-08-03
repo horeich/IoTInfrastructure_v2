@@ -61,6 +61,24 @@ Recommended development environment is Linux (or WSL)
   ```
 * If we want console output use ASPNETCORE_ENVIRONMENT=Development
 
+10. Run Commands on VM
+
+cd IoTBackend
+git pull origin master
+
+sudo docker network prune
+sudo docker-compose pull
+
+export PCS_KEYVAULT_NAME=""
+export PCS_AAD_APPID=""
+export PCS_AAD_APPSECRET=""
+export ASPNETCORE_ENVIRONMENT="Release"
+
+sudo -E docker-compose up -d
+sudo docker push horeichcontainers.azurecr.io/iotendpoint:latest
+sudo docker push horeichcontainers.azurecr.io/iotlink:latest 
+
+
 4. Test MQTT server
   ```sh
   mosquitto_pub -h 20.224.4.13 -p 8883 -u "ESTWIoTServer" -P "2VosUTxRN6nQ" -t test/topic -m "{\"value1\":20,\"value2\":40}" -i "mosquitto" -d --cafile /mnt/c/WorkDir/ESTWIoTBridge/MqttProxyServer/WebService/Certificates/Release/estw.root.crt --tls-version tlsv1.2 --insecure
