@@ -32,7 +32,7 @@ services:
       - storageadapter-v2
 
   coapendpoint:
-    image: horeichcontainers.azurecr.io/coapendpoint:latest   
+    image: horeichcontainers.azurecr.io/coapendpoint-v2:latest   
     build:
       context: ./CoAPEndpoint
       dockerfile: Dockerfile
