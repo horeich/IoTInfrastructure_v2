@@ -49,7 +49,7 @@ Recommended development environment is Linux (or WSL)
   $ sudo docker push horeichcontainers.azurecr.io/{name}
   ```
 
-* Pull images on VM
+11. Pull images on VM
   ```sh
   $ sudo docker pull horeichcontainers.azurecr.io/{name}
   ```
