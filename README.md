@@ -53,7 +53,7 @@ Recommended development environment is Linux (or WSL)
   ```sh
   $ sudo docker pull horeichcontainers.azurecr.io/{name}
   ```
-* Set environment variables in docker-compose file (ASPNETCORE_ENVIRONMENT=Production)
+* Set environment variables in docker-compose file (ASPNETCORE_ENVIRONMENT=Release)
 * For quick build an running container
   ```sh
   $ sudo docker build -t mqttproxyserverimg -f Dockerfile .
