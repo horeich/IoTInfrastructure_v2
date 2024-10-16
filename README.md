@@ -3,7 +3,7 @@
 Recommended development environment is Linux (or WSL)
 
 ## Container deployment via Azure Container Registry
-1. Create an Azure VM with Ubuntu 20.04
+1. Create an Azure VM with Ubuntu 20.04/ 22.04
 
 2. Add SSH configuration to access from computer (see Confluence)
 
