@@ -32,6 +32,9 @@ Recommended development environment is Linux (or WSL)
        * Production: logfile - Info, logfile - Info, i
        * Correct fileName for logFile (*"/var/log/{appName}/log_${shortdate}.json"*)
     * Check Dockerfile
+  
+9. Install net tools
+   ´´´sudo apt install net-tools```
 
 3. Deployment using Azure Container Registry
 * (https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-docker-cli?tabs=azure-cli)
