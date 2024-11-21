@@ -1,7 +1,7 @@
 # IoT Infrastructure (v2)
 
 ## Table of Contents
-- [IoT Infrastructure (v2)](#iot-infrastructure-(v2)
+- [IoT Infrastructure (v2)](#iot-infrastructure-(v2))
    - [Table of Contents](#table-of-contents)
    - [Container Deployment via Azure Container Registry](#container-deployment-via-azure-container-registry)
 
