@@ -3,10 +3,14 @@
 ## Table of Contents
 - [IoT Infrastructure (v2)](#iot-infrastructure-(v2))
    - [Table of Contents](#table-of-contents)
+   - [Feature Requests](#feature-requests)
    - [Container Deployment via Azure Container Registry](#container-deployment-via-azure-container-registry)
 
 * Recommended development environment is Linux
 * Use WSL for testing
+
+## Feature Requests
+* API access to disconnect device client from Azure Iot Hub
 
 ## Container Deployment via Azure Container Registry
 1. Create an Azure VM with Ubuntu 20.04/ 22.04
