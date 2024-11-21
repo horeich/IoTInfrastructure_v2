@@ -1,8 +1,13 @@
 # IoT Infrastructure (v2)
 
+## Table of Contents
+- [IoT Infrastructure (v2)](#iot-infrastructure-(v2)
+   - [Table of Contents](#table-of-contents)
+   - [Container Deployment via Azure Container Registry](#container-deployment-via-azure-container-registry)
+
 Recommended development environment is Linux (or WSL)
 
-## Container deployment via Azure Container Registry
+## Container Deployment via Azure Container Registry
 1. Create an Azure VM with Ubuntu 20.04/ 22.04
 
 2. Add SSH configuration to access from computer (see Confluence)
